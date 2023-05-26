@@ -19,6 +19,7 @@ const MyProfile = () => {
       setPosts(data);
     };
     if (session?.user.id) fetchPosts();
+    // else router.push("/");
   }, []);
 
   const handleEdit = (post) => {
