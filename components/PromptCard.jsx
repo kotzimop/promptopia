@@ -13,7 +13,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const [copied, setCopied] = useState("");
 
   const handleProfileClick = () => {
-    console.log(post);
 
     if (post.creator._id === session?.user.id) return router.push("/profile");
 
@@ -25,7 +24,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     navigator.clipboard.writeText(post.prompt);
     setTimeout(() => setCopied(false), 3000);
   };
-  
+
   return (
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
